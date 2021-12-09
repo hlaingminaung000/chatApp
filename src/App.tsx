@@ -12,12 +12,12 @@ function App() {
 	const [loading, setLoading] = useState(true);
 	const navigate = useNavigate();
 	useEffect(() => {
-		auth.onAuthStateChanged((userInfo) => {
-			setUser(userInfo);
+		auth.onAuthStateChanged((user) => {
+			setUser(user);
 			setLoading(false);
 			console.log("second");
-			console.log("userInfo", userInfo);
-			if (userInfo) navigate("/chats");
+			console.log("userInfo", user);
+			if (user) navigate("/chats");
 		});
 		console.log("first");
 	}, []);
