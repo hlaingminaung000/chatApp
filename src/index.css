@@ -154,3 +154,7 @@ body {
 .ce-chat-subtitle-text {
 	color: #4d2e2e !important;
 }
+.ce-message-bubble,
+.ce-their-message-bubble {
+	color: white !important;
+}

@@ -11,22 +11,12 @@ export default function Login() {
 				<div
 					className="login-button google"
 					onClick={() => {
-						auth.signInWithRedirect(new firebase.auth.GoogleAuthProvider());
+						auth
+							.signInWithPopup(new firebase.auth.GoogleAuthProvider())
+							.then((d) => console.log("d", d));
 					}}
 				>
 					<GoogleOutlined /> Sign In with Google
-				</div>
-
-				<br />
-				<br />
-
-				<div
-					className="login-button facebook"
-					onClick={() =>
-						auth.signInWithPopup(new firebase.auth.FacebookAuthProvider())
-					}
-				>
-					<i className="bi bi-facebook facebook-icon"></i>Sign In with Facebook
 				</div>
 			</div>
 		</div>
